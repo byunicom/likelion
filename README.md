@@ -5,3 +5,12 @@
 Homepage : https://likelion.net
 
 수업자료 모음으로 활용할 Repo
+
+[수업 중점 목표]
+1. CI/CD 구축
+   - Git Hub Actions
+   - Jenkins
+   - Gitea Actions
+2. Docker 활용
+
+
