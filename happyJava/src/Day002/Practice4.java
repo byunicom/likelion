@@ -12,12 +12,12 @@ public class Practice4 {
         Scanner scanner = new Scanner(System.in);
 
         int n;
-        int result=0;
+        int result=1;
         try{
             n=scanner.nextInt();
 
             for(int i=1;i<=n;i++){
-                result=n*i;
+                result = result * i;
             }
             System.out.println(n+"! = " + result);
 
