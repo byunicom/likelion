@@ -16,5 +16,7 @@ public class Opexam {
         String result = (num > 0)?"양수":"음수";
 
         System.out.println(result);
+
+        //test
     }
 }
