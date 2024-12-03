@@ -6,30 +6,41 @@
  */
 package Day002;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Practice5 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        int num;
-        int n;
-        int i=1;
+        int input = 0;
 
-        while(i<=100) {
-            n = scanner.nextInt();
-            num = (int) (Math.random() * 100);
+        while(true){
+            try{
+                int num;
+                int n = sc.nextInt();;
+                int i=1;
 
-            System.out.println(num);
-            if (n > num) {
-                System.out.println("정답보다 큽니다.");
-            } else if (n < num) {
-                System.out.println("정답보다 작습니다.");
-            } else {
-                System.out.println("정답입니다.");
+                while(i<=100) {
+                    //n = sc.nextInt();
+                    num = (int) (Math.random() * 100);
+
+                    System.out.println(num);
+                    if (n > num) {
+                        System.out.println("정답보다 큽니다.");
+                    } else if (n < num) {
+                        System.out.println("정답보다 작습니다.");
+                    } else {
+                        System.out.println("정답입니다.");
+                    }
+
+                    i++;
+                    sc.nextInt();
+                }
+            } catch (InputMismatchException e) {
+                sc.nextLine();
+                System.out.println("숫자를 입력하세요.");
             }
-
-            i++;
         }
     }
 }
