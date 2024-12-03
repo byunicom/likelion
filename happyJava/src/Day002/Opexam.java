@@ -13,6 +13,8 @@ public class Opexam {
         System.out.println(num);
         System.out.println("-----------------------");
 
+        System.out.println(b);
+        System.out.println("-----------------------");
         String result = (num > 0)?"양수":"음수";
 
         System.out.println(result);
