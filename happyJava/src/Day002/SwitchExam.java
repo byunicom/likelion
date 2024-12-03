@@ -5,19 +5,42 @@ package Day002;
 
 public class SwitchExam {
     public static void main(String[] args) {
-        int num = 1;
+        int num = 99;
+        String Str = "";
         switch (num){
-            case 1 :
-                System.out.println("1 입니다.");
+            case 100 :
+            case 99 :
+            case 98 :
+            case 97 :
+            case 96 :
+            case 95 :
+                Str = "A";
                 break;
-            case 2 :
-                System.out.println("2 입니다.");
+            case 94 :
+            case 93 :
+            case 92 :
+            case 91 :
+            case 90 :
+                Str = "B";
                 break;
-            case 3 :
-                System.out.println("3 입니다.");
+            case 89 :
+            case 88 :
+            case 87 :
+            case 86 :
+            case 85 :
+                Str = "C";
                 break;
-            default :
-                System.out.println("1, 2, 3 이 아닙니다.");
+            case 84 :
+            case 83 :
+            case 82 :
+            case 81 :
+            case 80 :
+                Str = "D";
+                break;
+            default:
+                Str = "F";
         }
+        System.out.println("학점은 "+Str+" 이고, 원점수는 "+num+" 입니다.");
+
     }
 }
