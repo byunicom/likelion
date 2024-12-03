@@ -13,11 +13,13 @@ public class Practice6 {
         Scanner scanner = new Scanner(System.in);
 
         int num;
+        int result = 0;
         do{
             num = scanner.nextInt();
+            result = result + num;
         }while(num != 0);
 
-        System.out.println("0 을 입력하셨습니다. 종료합니다.");
+        System.out.println("입력한 값의 합은 " + result + "입니다.");
 
     }
 }
