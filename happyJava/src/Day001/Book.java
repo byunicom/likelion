@@ -1,4 +1,4 @@
-/*
+/**
 * 책 한권의 정보를 담기 위한 클래스
 *
 * @author  byunicom
@@ -7,7 +7,7 @@
 *
 * */
 
-package Day01;
+package Day001;
 
 public class Book {
     /*

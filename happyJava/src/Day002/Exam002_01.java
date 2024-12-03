@@ -6,7 +6,7 @@
  *
 */
 
-package Day02;
+package Day002;
 
 public class Exam002_01 {
     public static void main(String[] args) {

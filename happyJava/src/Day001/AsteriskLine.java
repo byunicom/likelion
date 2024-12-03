@@ -1,4 +1,4 @@
-package Day01;
+package Day001;
 
 public class AsteriskLine {
     public static void main(String[] args) {

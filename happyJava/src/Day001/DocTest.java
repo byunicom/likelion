@@ -1,4 +1,4 @@
-package Day01;
+package Day001;
 
 /**
  * 자바 주석 테스트 하는 클래스
