@@ -9,7 +9,7 @@ public class IfExam2 {
         }else if(i>12 && i<=17){
             System.out.println("점심 먹었니?");
         }else if(i>17 && i<=21){
-            System.out.println("점심 먹었니?");
+            System.out.println("저녁 먹었니?");
         }else{
             System.out.println("야식 먹었니?");
         }
