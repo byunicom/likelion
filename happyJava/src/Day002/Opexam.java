@@ -17,6 +17,5 @@ public class Opexam {
 
         System.out.println(result);
 
-        //test
     }
 }
