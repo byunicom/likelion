@@ -14,43 +14,29 @@ public class Practice1_5 {
         int[] array1 = {1, 3, 5, 7, 9};
         int[] array2 = {0, 2, 4, 6, 8, 10, 3, 5};
 
-
         int totLength = array1.length+array2.length;
-//        int totIdx = 0;
         int[] array3 = new int[totLength];
 
-//        for(int i=0;i<array2.length;i++){
-//            array3[i]=array2[i];
-//            for(int j=0;j<array1.length;j++){
-//                if(array2[i]==array1[j]){
-////                    totIdx += totIdx;
-////                    array3 = new int[totIdx];
-//
-//                    //System.out.println(array2[i]);
-//                    array3[i] = array1[i];
-//                }
-//            }
-//        }
-        int final_idx=0;
+        //array1 과 array2 를 array3 에 누적담기 시작
+        int finalIdx=0;
         for(int i=0;i<array1.length;i++){
             array3[i]=array1[i];
-            final_idx=i;
+            finalIdx=i;
         }
-        final_idx++;
+        finalIdx++;
         for(int i=0;i<array2.length;i++){
-            array3[final_idx]=array2[i];
-            final_idx++;
+            array3[finalIdx]=array2[i];
+            finalIdx++;
         }
+        //array1 과 array2 를 array3 에 누적담기 끝
 
+        //array3 의 배열 값 중 중복값 제거하여 distArr 에 담기
+        int[] distArr = Arrays.stream(array3).distinct().toArray();
 
-//        System.out.println(array3.length);
-        int[] distArry = Arrays.stream(array3).distinct().toArray(int[]::new);
-        for(int i=0;i<array3.length;i++){
-            System.out.println(array3[i]);
+        //중복제거 후 표기
+        for(int i=0;i<distArr.length;i++){
+            System.out.println(distArr[i]);
         }
-
-
-//        System.out.println("333---"+Arrays.stream(array3).distinct().toArray().length);
 
     }
 }

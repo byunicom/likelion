@@ -22,6 +22,8 @@ public class Exam4 {
 
         int i=0;    //int를 담을 수 있는 변수 i 를 선언했고, int 값 0 을 넣어줌.
         //Pen p -- Pen 을 가르킬 수 있는 변수 p 를 선언.
+
+        p.write("안녕!");
     }
 
 }
