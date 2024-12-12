@@ -4,10 +4,16 @@
 autonumber
 
 Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+Bob -> byunicom: Authentication Request
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+Bob <-- byunicom: Another authentication Response
+Alice <-- Bob: Another authentication Response
+'byunicom --> Alice: Authentication Response
+'
+'
+'Alice <-- Bob: another authentication Response
+
+
 
 
 @enduml
