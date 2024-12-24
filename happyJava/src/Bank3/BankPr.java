@@ -1,5 +1,8 @@
 package Bank3;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 class Account {
         public static int totalCount = 0;
         public int money = 0;
@@ -84,17 +87,32 @@ class Account {
 class Bank {
         public static int totalCount = 0;
         public String name = null;
-        public Account[] account = new Account[10];
+        public Account[] account = new Account[5];
         public int accountCount = 0;
         public int accountCurrent = -1;
 
         public Bank() {
                 totalCount++;
+                start();
         }
 
-        public Bank(String name) {
-                totalCount++;
-                this.name = name;
+        public void start(){
+                Timer timer = new Timer();
+
+                TimerTask timerTask = new TimerTask() {
+                        @Override
+                        public void run() {
+                                menu();
+                        }
+                };
+
+                System.out.println("'//////////////////////////////.");
+                System.out.println("'/    Welcome Lion's Bank     /.");
+                System.out.println("'//////////////////////////////.");
+                System.out.println();
+                System.out.println();
+
+                timer.schedule(timerTask, 500);
         }
 
         public void accountAdd() {
@@ -116,7 +134,6 @@ class Bank {
                         if (account[i].id.equals(id)) {
                                 returnValue = true;
                         }
-                        ;
                 }
                 return returnValue;
         }
@@ -159,7 +176,18 @@ class Bank {
                 boolean flag = true;
 
                 while (flag) {
-                        System.out.println("1.계정등록 2.모든 계정 출력 3.로그인 4.로그아웃 5.계정삭제 6.종료");
+//                        System.out.println("1.계정등록 2.모든 계정 출력 3.로그인 4.로그아웃 5.계정삭제 6.종료");
+
+                        System.out.println("=== 라이온 은행 시스템 ===");
+                        System.out.println("1.\t고객 등록");
+                        System.out.println("2.\t계좌 생성");
+                        System.out.println("3.\t입금");
+                        System.out.println("4.\t출금");
+                        System.out.println("5.\t잔액 조회");
+                        System.out.println("6.\t종료");
+                        System.out.println("========================");
+
+                        System.out.println("메뉴 번호를 입력해주세요 > ");
                         String stringInput = sc.nextLine();
                         switch (stringInput) {
                                 case "1":
@@ -235,7 +263,6 @@ class Bank {
 
 public class BankPr {
         public static void main(String[] args) {
-                Bank bk = new Bank("한국은행");
-                bk.menu();
+                Bank bk = new Bank();
         }
 }
