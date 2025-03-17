@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 정보 등록</title>
+</head>
+<body>
+<div class="container">
+    <h1>환영합니다!</h1>
+    <p>기본 회원 정보를 등록해주세요.</p>
+    <form id="addUserForm">
+        <label for="email">email</label>
+        <input type="text" id="email" name="email">  <br>
+        <label for="password">password</label>
+        <input type="password" id="password" name="password">  <br>
+        <div class="buttons">
+            <button type="button" onclick="location.href='/'">취소</button>
+            <button type="button" onclick="addUser()">가입</button>
+        </div>
+    </form>
+    <script>
+        function addUser(){
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            fetch('/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({email: email, password: password})
+            });
+        }
+    </script>
+</div>
+</body>
+</html>

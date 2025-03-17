@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    background-color: white;
+    width: 100%; /* 화면 전체 넓이 사용 */
+}
+
+h2 {
+    text-align: center;
+    color: #2e3b72;
+    margin-top: 50px;
+    font-size: 32px;
+    width: 100%;
+}
+
+.container {
+    width: 100%; /* 컨테이너의 넓이를 화면에 맞춰 100%로 설정 */
+    max-width: none; /* max-width를 제거하여 제한 없게 설정 */
+    padding: 80px; /* 패딩은 그대로 유지 */
+    background-color: white;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2e3b72;
+    font-size: 18px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    width: 100%; /* 입력 필드도 100%로 설정 */
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    border-color: #d7d0e3;
+    outline: none;
+}
+
+button {
+    background-color: #d7d0e3;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #d7d0e3;
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #d7d0e3;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+.new-post-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #d7d0e3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.new-post-link:hover {
+    background-color: #aa9ebe;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 등록 폼</title>
+    <link rel="stylesheet" th:href="@{/css/board.css}">
+</head>
+<body>
+<div class="form-container">
+    <h2>Create a New Board</h2>
+    <form th:action="@{/boards/add}" th:object="${board}" method="post">
+    <label for="name">Name:</label><br>
+        <input type="text" id="name" th:field="*{name}" required/><br>
+    <label for="title">Title:</label><br>
+        <input type="text" id="title" th:field="*{title}" required/><br>
+    <label for="content">Content:</label><br>
+        <textarea id="content" rows="20" cols="100" th:field="*{content}" required></textarea><br>
+    <label for="password">Password:</label><br>
+        <input type="password" id="password" th:field="*{password}" required/><br><br>
+    <input type="submit" value="Create"><br>
+        <a th:href="@{/boards/list}">List</a>
+<!--<table>-->
+<!--    <tr><td>Create a New Board</td></tr>-->
+<!--    <tr><td>Name:</td></tr>-->
+<!--    <tr><td><input type="text" name="name"></td></tr>-->
+<!--    <tr><td>Title:</td></tr>-->
+<!--    <tr><td><input type="text" name="title"></td></tr>-->
+<!--    <tr><td>Content:</td></tr>-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            <textarea rows="20"></textarea>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr><td>Password:</td></tr>-->
+<!--    <tr><td><input type="password" name="password"></td></tr>-->
+<!--    <tr><td><button>Create</button></td></tr>-->
+<!--</table>-->
+</form>
+</div>
+</body>
+</html>

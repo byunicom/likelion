@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="button-b">ButtonB</button>
+    <h1>Button A - <span id="counter-a">0</span></h1>
+    <h1>Button B - <span id="counter-b">0</span></h1>
+    <script>
+      const incrementFunc = (e) => {
+        console.log(e.target);
+        console.log(counterA.innerHTML);
+        if (e.target.id == "button-a") {
+          counterA.innerHTML = Number(counterA.innerHTML) + 1;
+        } else {
+          counterB.innerHTML = Number(counterB.innerHTML) + 1;
+        }
+      };
+
+      const btnA = document.querySelector("#button-a");
+      const btnB = document.getElementById("#button-b");
+      const counterA = document.getElementById("counter-a");
+      const counterB = document.getElementById("counter-b");
+
+      btnA.addEventListener("click", incrementFunc);
+      btnB.addEventListener("click", incrementFunc);
+    </script>
+  </body>
+</html>

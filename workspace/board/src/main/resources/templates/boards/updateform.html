@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 수정 폼</title>
+    <link rel="stylesheet" type="text/css" href="/css/writeformstyles.css">
+</head>
+<body>
+<form th:action="@{/boards/updateform}" th:object="${board}" method="post">
+    <h1>Update</h1>
+<!--    <label for="name">ID:</label>-->
+    <input type="hidden" id="id" th:field="*{id}" readonly/><br>
+    <label for="name">Name:</label>
+    <input type="text" id="name" th:field="*{name}"/><br>
+    <label for="title">Title:</label>
+    <input type="text" id="title" th:field="*{title}"/><br>
+    <label for="content">Content:</label>
+    <textarea id="content" rows="10" th:field="*{content}"></textarea><br>
+    <label for="createdAt">등록일자:</label>
+    <input type="text" id="createdAt" th:field="*{createdAt}"/><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" th:field="*{password}"/><br><br>
+    <button type="submit">Update</button>
+<br>
+    <a th:href="@{/boards/list}" class="write-link">List</a>
+    <!--<table>-->
+    <!--    <tr><td>Create a New Board</td></tr>-->
+    <!--    <tr><td>Name:</td></tr>-->
+    <!--    <tr><td><input type="text" name="name"></td></tr>-->
+    <!--    <tr><td>Title:</td></tr>-->
+    <!--    <tr><td><input type="text" name="title"></td></tr>-->
+    <!--    <tr><td>Content:</td></tr>-->
+    <!--    <tr>-->
+    <!--        <td>-->
+    <!--            <textarea rows="20"></textarea>-->
+    <!--        </td>-->
+    <!--    </tr>-->
+    <!--    <tr><td>Password:</td></tr>-->
+    <!--    <tr><td><input type="password" name="password"></td></tr>-->
+    <!--    <tr><td><button>Create</button></td></tr>-->
+    <!--</table>-->
+</form>
+</body>
+</html>

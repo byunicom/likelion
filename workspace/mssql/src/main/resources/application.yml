@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: mssql
+
+  datasource:
+    url: jdbc:sqlserver://192.168.12.22:1433;databaseName=unierp5_test;encrypt=false;CharacterSet=UTF-8
+    username: sa
+    password: sa13$up14
+    platform: mssql
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServer2016Dialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true

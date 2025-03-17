@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: jwtexam
+
+  security:
+    user:
+      name: carami
+      password: 1234
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/jpadb
+    username: chill
+    password: chill
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+
+  spring:
+    devtools:
+      restart:
+        enabled: true
+server:
+  tomcat:
+    max-threads: 200
+    min-spare-threads: 10
+
+
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        security: trace
+
+
+jwt:
+  secretKey: 12345678901234567890123456789012
+  refreshKey: 12345678901234567890123456789012

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 상세 조회</title>
+    <link rel="stylesheet" th:href="@{/css/board.css}">
+</head>
+<body>
+<h2 th:text="${board.title}"></h2>
+<h3>Name: </h3>
+<p id="name" th:text="${board.name}"></p>
+<h3>Content: </h3>
+<textarea id="content" th:text="${board.content}" style="border:0px;" rows="20" readonly cols="100"></textarea>
+<h3>Created At: </h3>
+<p id="createdAt" th:text="${board.createdAt}"></p>
+<a th:href="@{/boards/list}">List</a>&nbsp;&nbsp;&nbsp;
+<a id="mod" th:href="@{/boards/updateform/{id}(id=${board.id})}">Edit</a>&nbsp;&nbsp;&nbsp;
+<a id="del" th:href="@{/boards/deleteform/{id}(id=${board.id})}">Delete</a>
+<!--<a id="del" th:href="@{/boards/deleteform/{id}(id=${board.id})}">Delete</a>-->
+</body>
+</html>
